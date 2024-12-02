@@ -1,8 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.btn {
+    background-color: red;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 0.9rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
 }
+
+
 
 body {
     font-family: Arial, Helvetica, sans-serif line-height: 1.6;
@@ -26,6 +34,13 @@ nav {
     align-items: center;
     gap: 1rem;
     list-style: none;
+
+}
+
+    nav a {
+        text-decoration: none;
+        color: #000000;
+
 }
 
 .logo {
@@ -41,10 +56,12 @@ nav {
 
 }
 
+
+
 header .search input[type="text"] {
     padding: 5px 10px;
     border: 1px solid #000000;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 header .search img,
@@ -80,140 +97,169 @@ main {
     color: rgb(203, 10, 10);
 }
 
-.movie-info p {
-    font-size: 16px;
-    margin: 30px 0;
-}
 
 
-.maturity-rating {
-    display: inline-block;
-    /* Kutuyu içerik boyutuna göre ayarlar */
-    padding: 5px 10px;
-    /* İçerik ile kutu kenarları arasındaki boşluğu belirler */
-    border: 2px solid rgb(18, 1, 1);
-    /* Kırmızı bir çerçeve */
-    border-radius: 5px;
-    /* Kenarları yuvarlatır */
-    color: rgb(1, 0, 0);
-    /* Yazı rengini kırmızı yapar */
-    font-weight: bold;
-    /* Yazıyı kalın yapar */
-    font-size: 14px;
-    /* Yazı boyutu */
-}
-
-
-.movie-info .btn {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
-    margin-top: 20px;
-
-
-}
-
-.movie-info .btn button {
-    background-color: #e50914;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.movie-info .btn button:hover {
-    background-color: #bf0810;
-}
-
-section {
+.suggestions {
     padding: 20px;
-}
-
-.suggetion-title {
+    background-color: #ececec;
+  }
+  
+  .suggestion-row {
+    margin: 20px 0;
+  
+  }
+  
+  .suggestion-title {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.suggetion-title a {
-    text-decoration: none;
-    color: #e50914;
-    font-weight: bold;
-}
-
-.suggestion-content {
+  }
+  
+  
+  .suggestion-content {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
-}
-
-.suggestion-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    flex: 1;
-    max-width: 20%;
-    text-align: center;
-}
-
-.suggestion-item img {
+    flex: 3;
+    overflow-x: scroll;
+  }
+  
+  .suggestion-item{
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.suggestion-item h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.suggestion-details {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.suggestion-item button {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 5px 10px;
+    
+  }
+  
+  .suggestion-item-content {
+    background-color: #fff;
+    padding: 15px;
     border-radius: 5px;
-    cursor: pointer;
-}
+    
+  }
+  
+  .suggestion-item-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .suggestion-details {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .suggestion-item .btn-md {
+    margin-top: 10px;
+  }
+  
+  .suggestion-item button {
+      background-color: #e50914;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .suggestion-item button:hover {
+      background-color: #bf0810;
+  }
 
-.suggestion-item button:hover {
-    background-color: #bf0810;
-}
-
-
-footer {
-    background: darkgrey;
-    color: white;
-    padding: 20px;
-    display:flex;
+  footer {
+    background-color: #f8f8f8;
+    padding: 1.2rem;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.2rem;
 }
-
-footer div {
-    margin: 10px;
+footer nav {
+   margin: 1.2rem 0;
+   text-align: center;
 }
-
+footer nav a {
+    padding: 1.2rem;
+    row-gap: 1.2rem;
+    text-decoration: none;
+    color: rgb(53, 45, 45);
+    margin: 0;
+}
 footer img {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    cursor: pointer;
+    flex: 1;
+    height: 2rem;
 }
 
-footer img:hover {
-    opacity: 0.8;
+@media (max-width: 428px) {
+    html {font-size: 10px;
+    }
+    header{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    header.logo{
+      order: 1;
+      text-align: left;
+      align-items: left;
+      flex:1;
+    }
+    
+    header.search{
+      order: 1;
+      text-align: right;
+      align-items: right;
+      flex: 1;
+    }
+  
+    header.nav{
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      margin-top: 10px;
+      order: 3;
+      gap: 1rem;
+    }
+    header.nav a{
+      margin: 5px;
+      flex: none;
+    }
+  
+    .search-btn{
+      max-width: 1.5rem;
+    }
+    .suggestion-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      gap: 10px;
+        }
+      .suggestion-item { 
+      width: 100%;
+        }
+      .suggestions:nth-of-type(3) {
+          display: none;
+        }
+    .suggestion-title a{
+      display: none;
+    }
+    footer {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+    }
+  
+    footer .footer-nav {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    footer .footer-social,
+    footer .app-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-height: 3rem;
+    }
 }
 
